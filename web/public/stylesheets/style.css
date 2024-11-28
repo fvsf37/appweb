@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lilita+One&display=swap");
 @import url("vars.css");
 @import url("cta.css");
 @import url("offcanvas.css");
@@ -12,95 +12,92 @@
 @import url("celebraciones.css");
 @import url("slider.css");
 
-
-html,body {
-  margin:0;
-  padding:0;
-
+html,
+body {
+  margin: 0;
+  padding: 0;
 }
 
-section.cols{
-  display:flex;
+section.cols {
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
-  div.inner{
-    display:flex;
-    gap:2rem;
+  div.inner {
+    display: flex;
+    gap: 2rem;
 
-    *{
-      flex:1;
+    * {
+      flex: 1;
     }
   }
-
 }
 
-.boxed{
-  gap:1rem;
-  *{
+.boxed {
+  gap: 1rem;
+  * {
     max-width: var(--site-width);
-    margin:0 auto;
+    margin: 0 auto;
   }
 }
 
-footer.boxed{
-  *{
-    max-width: calc( var(--site-width) + 10rem );
+footer.boxed {
+  * {
+    max-width: calc(var(--site-width) + 10rem);
   }
 }
 
-section h2{
+section h2 {
   text-align: center;
   font-family: var(--font-family-header);
-  font-size:3rem;
+  font-size: 3rem;
 }
 
-section#presentacion{
+section#presentacion {
   min-height: 100vh;
 }
 
-section#banner{
+section#banner {
   background-color: black;
-  background-image: url( ../images/fondo-cta.jpg );
+  background-image: url(../images/fondo-cta.jpg);
   transform: skewY(2deg);
-  transition:0s;
-  padding:2rem 0;
-  margin:2rem 0;
+  transition: 0s;
+  padding: 2rem 0;
+  margin: 2rem 0;
 
-  *{
-    font-size:2rem;
-    color:white;
-    transform:skewY(-2deg);
-
+  * {
+    font-size: 2rem;
+    color: white;
+    transform: skewY(-2deg);
   }
 
-  &:hover{
+  &:hover {
   }
 }
 
-section#video{
+section#video {
   min-height: 50rem;
-  position:relative;
+  position: relative;
   overflow: hidden;
 
-  .background{
-    position:absolute;
-    top:0;
-    left:0;
-    right:0;
-    bottom:0;
-    height:100%;
-    width:100%;
+  .background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
     object-fit: cover;
   }
 
-  .foreground{
+  .foreground {
     position: absolute;
-    top:0;
-    left:0;
-    right:0;
-    bottom:0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     display: flex;
     justify-content: center;
     align-items: center;

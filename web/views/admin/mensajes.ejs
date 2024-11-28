@@ -1,106 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Administración</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/stylesheets/admin.bootstrap.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Administración</title>
-  <link rel='stylesheet' href='/css/bootstrap.min.css' />
-  <link rel="stylesheet" href="/stylesheets/admin.bootstrap.css">
+  <body class="vh-100">
+    <nav
+      class="navbar navbar-expand-xl navbar-dark bg-primary p-2 justify-content-end sticky-top"
+    >
+      <a class="navbar-brand" href="/">Restaurante Viva Maria</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapsibleNavId"
+        aria-controls="collapsibleNavId"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
+      <div class="collapse navbar-collapse" id="collapsibleNavId">
+        <ul class="navbar-nav me-auto mt-2 mt-lg-0 justify-content-end w-100">
+          <li class="nav-item">
+            <a class="nav-link" href="/admin" aria-current="page">Admin</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/admin/carta" aria-current="page"
+              >Carta</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link active"
+              href="/admin/mensajes"
+              aria-current="page"
+              >Mensajes</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/logout" aria-current="page">Salir</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
 
-</head>
-
-<body class="vh-100">
-
-  <nav class="navbar navbar-expand-xl navbar-dark bg-primary p-2 justify-content-end sticky-top">
-    <a class="navbar-brand" href="/">Restaurante Viva Maria</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-
-    <div class="collapse navbar-collapse" id="collapsibleNavId">
-      <ul class="navbar-nav me-auto mt-2 mt-lg-0 justify-content-end w-100">
-        <li class="nav-item">
-          <a class="nav-link" href="/admin" aria-current="page">Admin</a>
+    <aside class="bg-secondary text-bg-secondary p-3">
+      <h2>Administración</h2>
+      <ul class="list-group">
+        <li class="list-group-item list-group-item-action">
+          <a class="nav-link" aria-current="page" href="/admin"
+            >Administración</a
+          >
         </li>
-        <li class="nav-item">
-            <a class="nav-link" href="/admin/carta" aria-current="page">Carta</a>
+        <li class="list-group-item list-group-item-action">
+          <a class="nav-link" href="/admin/carta">Carta</a>
         </li>
-        <li class="nav-item">
-            <a class="nav-link active" href="/admin/mensajes" aria-current="page">Mensajes</a>
-        </li>                  
-        <li class="nav-item">
-          <a class="nav-link" href="/logout" aria-current="page">Salir</a>
+        <li class="list-group-item list-group-item-action">
+          <a class="nav-link" href="/admin/mensajes">Contactos</a>
+        </li>
+        <li class="list-group-item list-group-item-action">
+          <a class="nav-link" href="/logout">Salir</a>
         </li>
       </ul>
-    </div>
-  </nav>
+    </aside>
 
-  <aside class="bg-secondary text-bg-secondary p-3">
-    <h2>Administración</h2>
-    <ul class="list-group">
-      <li class="list-group-item list-group-item-action">
-        <a class="nav-link" aria-current="page" href="/admin">Administración</a>
-      </li>
-      <li class="list-group-item list-group-item-action">
-        <a class="nav-link" href="/admin/carta">Carta</a>
-      </li>      
-      <li class="list-group-item list-group-item-action">
-        <a class="nav-link" href="/admin/mensajes">Contactos</a>
-      </li>
-      <li class="list-group-item list-group-item-action">
-        <a class="nav-link" href="/logout">Salir</a>
-      </li>
-    </ul>
-  </aside>
+    <main
+      class="d-flex flex-column align-items-center p-5 overflow-auto"
+      id="admin"
+    >
+      <h1>Solicitudes de contacto</h1>
+      <p>Aqui puedes ver los mensajes enviados desde la web</p>
 
-  <main class="d-flex flex-column align-items-center p-5 overflow-auto" id="admin">
-    
-    <h1>Solicitudes de contacto</h1>
-    <p>Aqui puedes ver los mensajes enviados desde la web</p>
-
-    <table class="table table-striped table-hover border-primary-subtle mt-4">
+      <table class="table table-striped table-hover border-primary-subtle mt-4">
         <thead>
-            <tr>
-                <th class="bg-primary text-bg-primary p-3">Fecha</th>
-                <th class="bg-primary text-bg-primary p-3">Nombre</th>
-                <th class="bg-primary text-bg-primary p-3">Correo</th>
-                <th class="mensaje bg-primary text-bg-primary p-3">Mensaje</th>
-                <th class="origen bg-primary text-bg-primary p-3">Origen</th>
-            </tr>
+          <tr>
+            <th class="bg-primary text-bg-primary p-3">Fecha</th>
+            <th class="bg-primary text-bg-primary p-3">Nombre</th>
+            <th class="bg-primary text-bg-primary p-3">Correo</th>
+            <th class="mensaje bg-primary text-bg-primary p-3">Mensaje</th>
+            <th class="origen bg-primary text-bg-primary p-3">Origen</th>
+          </tr>
         </thead>
         <tbody>
-
-            <% mensajes.forEach(mensaje => { %>
-                <tr>
-                    <td><%= new Date(mensaje.fecha).toLocaleString("es-ES", {
-                        day: '2-digit',
-                        month: '2-digit',
-                        year: '2-digit',
-                        hour: '2-digit',
-                        minute: '2-digit',
-                    }); %></td>
-                    <td><%= mensaje.nombre %></td>
-                    <td><%= mensaje.email %></td>
-                    <td><%= mensaje.mensaje %></td>
-                    <td><%= mensaje.info %></td>
-                </tr>
-            <% }) %>
-
+          <% mensajes.forEach(mensaje => { %>
+          <tr>
+            <td>
+              <%= new Date(mensaje.fecha).toLocaleString("es-ES", { day:
+              '2-digit', month: '2-digit', year: '2-digit', hour: '2-digit',
+              minute: '2-digit', }); %>
+            </td>
+            <td><%= mensaje.nombre %></td>
+            <td><%= mensaje.email %></td>
+            <td><%= mensaje.mensaje %></td>
+            <td><%= mensaje.info %></td>
+          </tr>
+          <% }) %>
         </tbody>
-    </table>
-  </main>
+      </table>
+    </main>
 
-  <footer class="bg-primary text-bg-primary text-center">
-    <p>ADMIN Developed by 2DAW</p>
-  </footer>
+    <footer class="bg-primary text-bg-primary text-center">
+      <p>ADMIN Developed by 2DAW</p>
+    </footer>
 
-  <script src="/js/bootstrap.bundle.min.js"></script>
-</body>
-
+    <script src="/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>
-
-
-
 
 <!--DOCTYPE html>
 <html lang="en">

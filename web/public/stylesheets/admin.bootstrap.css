@@ -1,12 +1,19 @@
-body{
-    display:grid;
-    grid-template-columns: auto 1fr;
-    grid-template-rows: auto 1fr auto;
-    grid-template-areas: "nav nav" "aside main" "aside footer";
+body {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas: "nav nav" "aside main" "aside footer";
 
-    nav{ grid-area: nav; }
-    aside{ grid-area: aside; }
-    main{ grid-area:main; }
-    footer{ grid-area:footer; }
+  nav {
+    grid-area: nav;
+  }
+  aside {
+    grid-area: aside;
+  }
+  main {
+    grid-area: main;
+  }
+  footer {
+    grid-area: footer;
+  }
 }
-
